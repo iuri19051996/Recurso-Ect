@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECT - Sonorização</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&family=Titillium+Web:wght@900&display=swap" rel="stylesheet">
+
+    <!-- Js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="js/slider.js"></script>
+</head>
+
+<body>
+    <div class="outer-wrapper">
+        <div class="ratio-enforcer">
+            <div class="recurso">
+                <audio class="audio audio-pergunta1" loop>
+                    <source src="audio/Audio 1 - bike no parque.mp3" type="audio/mpeg">
+                </audio>
+
+                <h1 class="titulo-atividade">
+                    SONORIZ<span>AÇÃO</span>
+                </h1>
+
+                <div class="pagina">
+                    <p style="color: #000000; background-color: #F6A842;">1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+
+                <p class="txt-intro">
+                    Ouça com atenção o som abaixo:
+                </p>
+
+                <div class="grid-spectrum">
+                    <button class="play1">
+                        <img src="img/play.svg" alt="play">
+                    </button>
+                    <button class="pause1 none" style="display: none;">
+                        <img src="img/pause.png" alt="pause">
+                    </button>
+                    <canvas class="spectrum" id="canvas"></canvas>
+                </div>
+
+                <p class="txt-pergunta">
+                    Escolha a alternativa que melhor descreve o som ouvido:
+                </p>
+
+                <div class="opcoes">
+                    <button>
+                        <p>Passeio de bicicleta no parque</p>
+                        <div class="circulo"></div>
+                    </button>
+                    <button>
+                        <p>Jogo de futebol</p>
+                        <div class="circulo"></div>
+                    </button>
+                    <button>
+                        <p>Apresentação de uma peça de teatro</p>
+                        <div class="circulo"></div>
+                    </button>
+                    <button>
+                        <p>Corrida de carros</p>
+                        <div class="circulo"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
