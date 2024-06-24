@@ -16,14 +16,29 @@
 
     <!-- Js -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="js/slider.js"></script>
+    <script defer src="js/principal.js"></script>
 </head>
 
 <body>
     <div class="outer-wrapper">
         <div class="ratio-enforcer">
+            <audio class="audio-click" src="audio/click.mp3"></audio>
+            <audio class="audio-correto" src="audio/correto.mp3"></audio>
+            <audio class="audio-incorreto" src="audio/incorreto.mp3"></audio>
+            <audio class="audio-vitoria" src="audio/vitória.mp3"></audio>
+            
             <div class="recurso">
-                <audio class="audio audio-pergunta1" loop>
+                <h1 class="titulo-capa">
+                    SONORIZ<span>AÇÃO</span>
+                </h1>
+                <img class="img-capa" src="img/capa.svg" alt="spectrum">
+                <button class="btn-iniciar" onclick="plusDivs(+1)">
+                    Iniciar
+                </button>
+            </div>
+
+            <div class="recurso atividade1">
+                <audio class="audio1 audio-pergunta1" loop>
                     <source src="audio/Audio 1 - bike no parque.mp3" type="audio/mpeg">
                 </audio>
 
@@ -39,7 +54,6 @@
 
                 <p class="txt-intro">
                     Ouça com atenção o som abaixo:
-                    teste
                 </p>
 
                 <div class="grid-spectrum">
@@ -49,7 +63,7 @@
                     <button class="pause1 none" style="display: none;">
                         <img src="img/pause.png" alt="pause">
                     </button>
-                    <canvas class="spectrum" id="canvas"></canvas>
+                    <canvas class="spectrum canvas1"></canvas>
                 </div>
 
                 <p class="txt-pergunta">
@@ -57,23 +71,201 @@
                 </p>
 
                 <div class="opcoes">
-                    <button>
+                    <button class="true1">
                         <p>Passeio de bicicleta no parque</p>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <img class="icone-true none" src="img/certo.svg" alt="ícone feedback">
+                        </div>
                     </button>
-                    <button>
+                    <button class="false1">
                         <p>Jogo de futebol</p>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
                     </button>
-                    <button>
+                    <button class="false2">
                         <p>Apresentação de uma peça de teatro</p>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
                     </button>
-                    <button>
+                    <button class="false3">
                         <p>Corrida de carros</p>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
                     </button>
                 </div>
+
+                <div class="feedback none feedback-certo">
+                    <p class="txt-feedbackCerto">
+                        Parabéns! Você acertou
+                    </p>
+                </div>
+
+                <div class="feedback none feedback-erro">
+                    <p class="txt-feedbackErro">
+                        Tente novamente
+                    </p>
+                </div>
+            </div>
+
+            <div class="recurso atividade2">
+                <audio class="audio2 audio-pergunta2" loop>
+                    <source src="audio/Audio 2 - cafeteria.mp3" type="audio/mpeg">
+                </audio>
+
+                <h1 class="titulo-atividade">
+                    SONORIZ<span>AÇÃO</span>
+                </h1>
+
+                <div class="pagina">
+                    <p>1</p>
+                    <p style="color: #000000; background-color: #F6A842;">2</p>
+                    <p>3</p>
+                </div>
+
+                <p class="txt-intro">
+                    Ouça com atenção o som abaixo:
+                </p>
+
+                <div class="grid-spectrum">
+                    <button class="play2">
+                        <img src="img/play.svg" alt="play">
+                    </button>
+                    <button class="pause2" style="display: none;">
+                        <img src="img/pause.png" alt="pause">
+                    </button>
+                    <canvas class="spectrum canvas2"></canvas>
+                </div>
+
+                <p class="txt-pergunta">
+                    Escolha a alternativa que melhor descreve o som ouvido:
+                </p>
+
+                <div class="opcoes">
+                    <button class="false1">
+                        <p>Balada</p>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                    <button class="false2">
+                        <p>Fliperama</p>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                    <button class="true2">
+                        <p>Cafeteria</p>
+                        <div class="circulo">
+                            <img class="icone-true none" src="img/certo.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                    <button class="false3">
+                        <p>Biblioteca</p>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                </div>
+
+                <div class="feedback none feedback-certo">
+                    <p class="txt-feedbackCerto">
+                        Parabéns! Você acertou
+                    </p>
+                </div>
+
+                <div class="feedback none feedback-erro">
+                    <p class="txt-feedbackErro">
+                        Tente novamente
+                    </p>
+                </div>
+            </div>
+
+            <div class="recurso atividade3">
+                <audio class="audio3 audio-pergunta3" loop>
+                    <source src="audio/Audio 3 - livro.mp3" type="audio/mpeg">
+                </audio>
+
+                <h1 class="titulo-atividade">
+                    SONORIZ<span>AÇÃO</span>
+                </h1>
+
+                <div class="pagina">
+                    <p>1</p>
+                    <p>2</p>
+                    <p style="color: #000000; background-color: #F6A842;">3</p>
+                </div>
+
+                <p class="txt-intro">
+                    Ouça com atenção o som abaixo:
+                </p>
+
+                <div class="grid-spectrum">
+                    <button class="play3">
+                        <img src="img/play.svg" alt="play">
+                    </button>
+                    <button class="pause3" style="display: none;">
+                        <img src="img/pause.png" alt="pause">
+                    </button>
+                    <canvas class="spectrum canvas3"></canvas>
+                </div>
+
+                <p class="txt-pergunta">
+                    Escolha a alternativa que melhor descreve o som ouvido:
+                </p>
+
+                <div class="opcoes">
+                    <button class="false1">
+                        <p>Lápis de cor</p>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                    <button class="true3">
+                        <p>Livro</p>
+                        <div class="circulo">
+                            <img class="icone-true none" src="img/certo.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                    <button class="false2">
+                        <p>Teclado</p>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                    <button class="false3">
+                        <p>Tesoura</p>
+                        <div class="circulo">
+                            <img class="icone-false none" src="img/erro.svg" alt="ícone feedback">
+                        </div>
+                    </button>
+                </div>
+
+                <div class="feedback none feedback-certo">
+                    <p class="txt-feedbackCerto">
+                        Parabéns! Você acertou
+                    </p>
+                </div>
+
+                <div class="feedback none feedback-erro">
+                    <p class="txt-feedbackErro">
+                        Tente novamente
+                    </p>
+                </div>
+            </div>
+
+            <div class="recurso tela-final">
+                <h1 class="titulo-capa">
+                    SONORIZ<span>AÇÃO</span>
+                </h1>
+                <img class="img-trofeu" src="img/troféu.svg" alt="troféu">
+                <p class="txt-final">Parabéns, você finalizou a atividade.</p>
+                <img class="img-spectrumFinal" src="img/spectrumFinal.png" alt="spectrum">
+                <button class="btn-final" onClick="window.location.reload()">
+                    Voltar ao início
+                </button>
             </div>
         </div>
     </div>
